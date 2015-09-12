@@ -5,6 +5,8 @@
  *    user zoom.
  */
 @import url(http://fonts.googleapis.com/css?family=Cardo:400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=PT+Serif:400);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -365,14 +367,26 @@ body {
   line-height: 1.6em;
   -webkit-font-smoothing: antialiased;
 }
+footer {
+  font-family: Raleway, sans-serif;
+  font-size: 0.75em;
+}
 a {
-  color: #000000;
-  text-decoration: none;
-  border-bottom: 1px solid #cccccc;
+  color: #245b5a;
+  text-decoration: underline;
 }
 a:hover {
+  color: #245b5a;
+  background-color: #f6f6f6;
+}
+h1 a {
   color: #000000;
-  background: #fdf9ec;
+  text-decoration: none;
+}
+h1 a:hover {
+  color: #245b5a;
+  text-decoration: underline;
+  background-color: inherit;
 }
 hr {
   display: block;
@@ -426,12 +440,21 @@ blockquote {
   margin-top: 4em;
   text-align: center;
 }
+.masthead--post {
+  font-family: Raleway, sans-serif;
+  font-size: 0.75em;
+}
+.masthead--post p {
+  text-align: center;
+  color: #777;
+}
 .post-header {
   text-align: center;
   margin-bottom: 1.5em;
 }
 .post-header h1 {
-  font-size: 2.5em;
+  font-family: 'PT Serif', Georgia, serif;
+  font-size: 2.8em;
   line-height: 1.3em;
   margin-bottom: 0.5em;
   font-weight: normal;
@@ -445,12 +468,12 @@ blockquote {
   margin-right: auto;
   margin-top: 1.5em;
 }
-.post-nav {
+.pagination {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.post-nav-item {
+.pagination-item {
   flex: 0 0 auto;
   display: inline-block;
   width: 45%;
@@ -458,16 +481,17 @@ blockquote {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.post-nav-item.prev {
-  text-align: right;
-}
-.post-nav-item.next {
+.pagination-item.prev {
   text-align: left;
 }
-.post-nav-item.prev:last-child,
-.post-nav-item.next:first-child {
-  width: 100%;
-  text-align: center;
+.pagination-item.prev:before {
+  content: '\02190 ';
+}
+.pagination-item.next {
+  text-align: right;
+}
+.pagination-item.next:after {
+  content: '\02192 ';
 }
 .post {
   margin-top: 3em;

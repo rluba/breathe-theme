@@ -1,5 +1,15 @@
 {{!< default}}
+<header class="masthead--post">
+	<p>
+		Welcome to <a href="{{@blog.url}}">{{@blog.title}}</a>, enjoy your stay.
+	</p>
+</header>
 
-{{#post}}
-{{> post-single }}
-{{/post}}
+<main>
+	{{#post}}
+		{{> post-single}}
+	{{/post}}
+</main>
+
+
+

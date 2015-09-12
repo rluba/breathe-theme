@@ -1,5 +1,22 @@
 {{!< default}}
+<header class="main-header">
+	<div class="title-wrapper">
+		<h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+		<p>{{@blog.description}}</p>
+	</div>
 
-{{#foreach posts}}
-  {{> post-single}}
-{{/foreach}}
+	<nav class="main-menu">
+		{{navigation}}
+	</nav>
+</header>
+
+<main>
+	{{#foreach posts}}
+		{{> post-single linkPost=true}}
+	{{/foreach}}
+</main>
+
+<footer>
+	{{pagination}}
+</footer>
+
