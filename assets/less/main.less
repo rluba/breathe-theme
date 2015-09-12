@@ -78,16 +78,11 @@ blockquote {
 }
 
 .main-header {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-
-	& > * {
-		flex: 0 1 auto;
+	.title-wrapper {
+		float: left;
 	}
-
 	.main-menu {
-		align-self: center;
+		float: right;
 	}
 
 	h1 {
@@ -98,6 +93,10 @@ blockquote {
 			margin-top: 0;
 		}
 	}
+}
+
+main {
+	clear: both;
 }
 
 .main-menu {
