@@ -39,12 +39,21 @@ footer {
 }
 
 a {
+	color: @link-color;
+	text-decoration: underline;
+	&:hover {
+		color: @link-color;
+		background-color: lighten(#aaa, 30%);
+	}
+
+	h1 & {
 	color: @black-shade;
 	text-decoration: none;
-	border-bottom: 1px solid @medium-gray;
-	&:hover {
-		color: @black-shade;
-		background: lighten(#FCF6E3, 2%);
+		&:hover {
+			color: @link-color;
+			text-decoration: underline;
+			background-color: inherit;
+		}
 	}
 }
 
