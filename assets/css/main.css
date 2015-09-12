@@ -405,6 +405,16 @@ blockquote {
   max-width: 42em;
   margin: 0 auto;
 }
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-wrapper {
+    margin: 2em;
+  }
+}
 .main-header .title-wrapper {
   float: left;
 }
