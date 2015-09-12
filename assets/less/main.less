@@ -1,5 +1,7 @@
 @import '_normalize';
 @import url(http://fonts.googleapis.com/css?family=Cardo:400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=PT+Serif:400);
 
 @white: #fff;
 @black: #333;
@@ -8,6 +10,20 @@
 @medium-gray: #ccc;
 @medium-gray-shade: #999;
 
+@link-color: #245B5A;
+
+.sans-serif() {
+	font-family: Raleway, sans-serif;
+}
+
+.title-font() {
+	font-family: 'PT Serif', Georgia, serif;
+}
+
+.smaller() {
+	font-size: 0.75em;
+}
+
 body {
 	background: @white;
 	color: @black;
@@ -15,6 +31,11 @@ body {
 	font-size: 1.3em;
 	line-height: 1.6em;
 	-webkit-font-smoothing: antialiased;
+}
+
+footer {
+	.sans-serif;
+	.smaller;
 }
 
 a {
@@ -91,12 +112,22 @@ blockquote {
 	text-align: center;
 }
 
+.masthead--post {
+	.sans-serif;
+	.smaller;
+	p {
+		text-align: center;
+		color: #777;
+	}
+}
+
 .post-header {
 	text-align: center;
 	margin-bottom: 1.5em;
 
 	h1 {
-		font-size: 2.5em;
+		.title-font;
+		font-size: 2.8em;
 		line-height: 1.3em;
 		margin-bottom: 0.5em;
 		font-weight: normal;

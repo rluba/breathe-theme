@@ -5,6 +5,8 @@
  *    user zoom.
  */
 @import url(http://fonts.googleapis.com/css?family=Cardo:400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=PT+Serif:400);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -365,6 +367,10 @@ body {
   line-height: 1.6em;
   -webkit-font-smoothing: antialiased;
 }
+footer {
+  font-family: Raleway, sans-serif;
+  font-size: 0.75em;
+}
 a {
   color: #000000;
   text-decoration: none;
@@ -426,12 +432,21 @@ blockquote {
   margin-top: 4em;
   text-align: center;
 }
+.masthead--post {
+  font-family: Raleway, sans-serif;
+  font-size: 0.75em;
+}
+.masthead--post p {
+  text-align: center;
+  color: #777;
+}
 .post-header {
   text-align: center;
   margin-bottom: 1.5em;
 }
 .post-header h1 {
-  font-size: 2.5em;
+  font-family: 'PT Serif', Georgia, serif;
+  font-size: 2.8em;
   line-height: 1.3em;
   margin-bottom: 0.5em;
   font-weight: normal;
