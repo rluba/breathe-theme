@@ -154,33 +154,38 @@ blockquote {
 	margin-top: 1.5em;
 }
 
-.post-nav {
+.pagination {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+
+	&-item {
+		flex: 0 0 auto;
+		display: inline-block;
+		width: 45%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		&.prev {
+			text-align: left;
+			&:before {
+ 				content: '\02190 ';
+			}
+		}
+		&.next {
+			text-align: right;
+			&:after {
+ 				content: '\02192 ';
+			}
+		}
+		// &.prev:last-child, &.next:first-child {
+		// 	width: 100%;
+		// 	text-align: center;
+		// }
+	}
 }
 
-.post-nav-item {
-	flex: 0 0 auto;
-	display: inline-block;
-	width: 45%;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	&.prev {
-		text-align: right;
-	}
-	&.next {
-		text-align: left;
-	}
-	&.prev:last-child, &.next:first-child {
-		width: 100%;
-		text-align: center;
-	}
-}
-
-
-.post-nav-item + .post-nav-item:before {
+.pagination-item + .pagination-item:before {
 	// content: '–\00a0';
 }
 

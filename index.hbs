@@ -12,8 +12,11 @@
 
 <main>
 	{{#foreach posts}}
-	  {{> post-single linkPost=true}}
+		{{> post-single linkPost=true}}
 	{{/foreach}}
 </main>
 
+<footer>
+	{{pagination}}
+</footer>
 

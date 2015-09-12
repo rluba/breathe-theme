@@ -19,18 +19,15 @@
 		{{content}}
 	</div>
 
-	{{^is "page"}}
-		<hr>
+	{{#is "post"}}
 		<footer class="post-footer">
-			{{^is "page"}}
-				<p class="post-meta post-meta--footer">
-					<span class="author">{{author.name}}</span> wrote this on
-					<time class="post-time" datetime="{{date format='YYYY-MM-DD'}}">{{date}}</time>.
-				</p>
-			{{/is}}
-			<nav class="post-nav">
-				{{#prev_post}}<span class="post-nav-item prev">Previous: <a href="{{url}}">{{title}}</a></span>{{/prev_post}}
-				{{#next_post}}<span class="post-nav-item next">Next: <a href="{{url}}">{{title}}</a></span>{{/next_post}}
+			<p class="post-meta post-meta--footer">
+				<span class="author">{{author.name}}</span> wrote this on
+				<time class="post-time" datetime="{{date format='YYYY-MM-DD'}}">{{date}}</time>.
+			</p>
+			<nav class="pagination">
+				{{#prev_post}}<a class="pagination-item prev" href="{{url}}">{{title}}</a>{{/prev_post}}
+				{{#next_post}}<a class="pagination-item next" href="{{url}}">{{title}}</a>{{/next_post}}
 			</nav>
 		</footer>
 	{{/is}}

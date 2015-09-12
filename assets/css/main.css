@@ -468,12 +468,12 @@ blockquote {
   margin-right: auto;
   margin-top: 1.5em;
 }
-.post-nav {
+.pagination {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.post-nav-item {
+.pagination-item {
   flex: 0 0 auto;
   display: inline-block;
   width: 45%;
@@ -481,16 +481,17 @@ blockquote {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.post-nav-item.prev {
-  text-align: right;
-}
-.post-nav-item.next {
+.pagination-item.prev {
   text-align: left;
 }
-.post-nav-item.prev:last-child,
-.post-nav-item.next:first-child {
-  width: 100%;
-  text-align: center;
+.pagination-item.prev:before {
+  content: '\02190 ';
+}
+.pagination-item.next {
+  text-align: right;
+}
+.pagination-item.next:after {
+  content: '\02192 ';
 }
 .post {
   margin-top: 3em;
